@@ -1,65 +1,36 @@
-import Image from "next/image";
-
 export default function Home() {
+  const appName = process.env.NEXT_PUBLIC_APP_NAME || "Lab8_App";
+  const studentName = process.env.NEXT_PUBLIC_STUDENT_NAME || "Muhammad Armaghan";
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main style={{ textAlign: "center", marginTop: "10%", fontFamily: "sans-serif" }}>
+      <h1 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+        Lab 8 — Vercel Deployment
+      </h1>
+      <p style={{ fontSize: "1.2rem" }}>
+        <strong>Name:</strong> {studentName}
+      </p>
+      <p style={{ fontSize: "1.2rem" }}>
+        <strong>Roll:</strong> 01-131232-050
+      </p>
+      <p style={{ fontSize: "1rem", marginTop: "0.5rem", color: "#555" }}>
+        <strong>App:</strong> {appName}
+      </p>
+      <hr style={{ margin: "2rem auto", width: "50%" }} />
+      <h2 style={{ fontSize: "1.4rem", marginBottom: "1rem" }}>Labs Completed</h2>
+      <ul style={{ listStyle: "none", padding: 0, fontSize: "1.1rem" }}>
+        <li>Lab 1 — Docker</li>
+        <li>Lab 2 — LocalStack</li>
+        <li>Lab 7 — Terraform</li>
+        <li>Lab 8 — Vercel (this lab)</li>
+      </ul>
+      <hr style={{ margin: "2rem auto", width: "50%" }} />
+      <h2 style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>API Endpoints</h2>
+      <ul style={{ listStyle: "none", padding: 0 }}>
+        <li><a href="/api/hello">/api/hello</a> — Basic GET</li>
+        <li><a href="/api/student/001">/api/student/001</a> — Dynamic Route</li>
+        <li><a href="/api/geo">/api/geo</a> — Edge Geolocation</li>
+      </ul>
+    </main>
   );
 }
