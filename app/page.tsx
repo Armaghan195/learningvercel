@@ -25,11 +25,6 @@ export default function Home() {
         <li>Lab 8 — Vercel (this lab)</li>
       </ul>
       <hr style={{ margin: "2rem auto", width: "50%" }} />
-      <h2 style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>Course Info</h2>
-      <p style={{ fontSize: "1rem", color: "#444" }}>Course: Cloud Computing | Bahria University</p>
-      <p style={{ fontSize: "1rem", color: "#444" }}>Instructor: Engr. Salman Zafar</p>
-      <p style={{ fontSize: "1rem", color: "#444" }}>Department: Software Engineering</p>
-      <hr style={{ margin: "2rem auto", width: "50%" }} />
       <h2 style={{ fontSize: "1.2rem", marginBottom: "0.5rem" }}>API Endpoints</h2>
       <ul style={{ listStyle: "none", padding: 0 }}>
         <li><a href="/api/hello">/api/hello</a> — Basic GET</li>
