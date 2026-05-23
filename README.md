@@ -5,7 +5,7 @@
 **Lab Number:** Lab 8
 **Course:** Cloud Computing — Bahria University
 
-**Vercel Production URL:** _(add your URL after deployment)_
+**Vercel Production URL:** https://my-lab8-86hkumb9g-armaghan195s-projects.vercel.app/
 
 ---
 
